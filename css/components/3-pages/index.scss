@@ -114,7 +114,7 @@
   }
   &__image {
     width: calc(55% - 15px);
-    max-width: 570px;
+    max-width: 520px;
     &-ratio {
       padding-bottom: 60%;
       position: relative;
@@ -131,35 +131,62 @@
         object-fit: contain;
       }
       &._lg {
-        width: 60%;
+        width: 68%;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%) rotate(-2.932deg);
         z-index: 5;
       }
       &._bg {
-        width: 23%;
+        width: 25%;
         padding-bottom: 23%;
         background: $white-3;
         border-radius: 50%;
         left: 0;
-        top: 30%;
+        top: 33%;
         transform: rotate(-13.074deg);
         img {
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 62%;
-          height: 62%;
+          width: 70%;
+          height: 70%;
           transform: translate(-50%, -50%);
           opacity: 0.5;
         }
         &._right {
           transform: rotate(10.077deg);
           left: unset;
-          top: 25%;
+          top: 22%;
           right: 0;
         }
+        z-index: 2;
+      }
+      &._sm {
+        width: 36%;
+        top: 2%;
+        left: 8%;
+        transform: rotate(354deg);
+        &._right {
+          top: unset;
+          left: unset;
+          right: 6%;
+          bottom: 8%;
+          transform: rotate(350deg);
+        }
+      }
+    }
+
+    .shape {
+      transform: rotate(23deg);
+      left: 9%;
+      bottom: 12%;
+      &._top {
+        transform: rotate(217deg);
+        left: unset;
+        bottom: unset;
+        right: 12%;
+        top: -6px;
       }
     }
   }
@@ -168,6 +195,29 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+  }
+}
+.shape {
+  position: absolute;
+  font-size: 30px;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgba(#4360f6, 0.9), rgba(#4360f6, 0));
+  span {
+    font-size: inherit;
+    background: linear-gradient(
+      to bottom,
+      rgba(#0d1333, 0.85),
+      rgba(#4360f6, 0)
+    );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.66em;
+    height: 1.66em;
+    border-radius: 50%;
   }
 }
 .clients {

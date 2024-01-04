@@ -1564,7 +1564,7 @@ svg {
 }
 .hero__image {
   width: calc(55% - 15px);
-  max-width: 570px;
+  max-width: 520px;
 }
 .hero__image-ratio {
   padding-bottom: 60%;
@@ -1590,7 +1590,7 @@ svg {
      object-fit: contain;
 }
 .hero__image-item._lg {
-  width: 60%;
+  width: 68%;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-2.932deg);
@@ -1598,21 +1598,22 @@ svg {
   z-index: 5;
 }
 .hero__image-item._bg {
-  width: 23%;
+  width: 25%;
   padding-bottom: 23%;
   background: #EEF1FF;
   border-radius: 50%;
   left: 0;
-  top: 30%;
+  top: 33%;
   -webkit-transform: rotate(-13.074deg);
           transform: rotate(-13.074deg);
+  z-index: 2;
 }
 .hero__image-item._bg img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 62%;
-  height: 62%;
+  width: 70%;
+  height: 70%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0.5;
@@ -1621,8 +1622,37 @@ svg {
   -webkit-transform: rotate(10.077deg);
           transform: rotate(10.077deg);
   left: unset;
-  top: 25%;
+  top: 22%;
   right: 0;
+}
+.hero__image-item._sm {
+  width: 36%;
+  top: 2%;
+  left: 8%;
+  -webkit-transform: rotate(354deg);
+          transform: rotate(354deg);
+}
+.hero__image-item._sm._right {
+  top: unset;
+  left: unset;
+  right: 6%;
+  bottom: 8%;
+  -webkit-transform: rotate(350deg);
+          transform: rotate(350deg);
+}
+.hero__image .shape {
+  -webkit-transform: rotate(23deg);
+          transform: rotate(23deg);
+  left: 9%;
+  bottom: 12%;
+}
+.hero__image .shape._top {
+  -webkit-transform: rotate(217deg);
+          transform: rotate(217deg);
+  left: unset;
+  bottom: unset;
+  right: 12%;
+  top: -6px;
 }
 .hero .autoContainer {
   width: 100%;
@@ -1636,6 +1666,29 @@ svg {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.shape {
+  position: absolute;
+  font-size: 30px;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(67, 96, 246, 0.9)), to(rgba(67, 96, 246, 0)));
+  background: linear-gradient(to bottom, rgba(67, 96, 246, 0.9), rgba(67, 96, 246, 0));
+}
+.shape span {
+  font-size: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 19, 51, 0.85)), to(rgba(67, 96, 246, 0)));
+  background: linear-gradient(to bottom, rgba(13, 19, 51, 0.85), rgba(67, 96, 246, 0));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1.66em;
+  height: 1.66em;
+  border-radius: 50%;
 }
 
 .clients {
