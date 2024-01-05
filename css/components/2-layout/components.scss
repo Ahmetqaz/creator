@@ -33,18 +33,19 @@
 .input {
   display: flex;
   width: 100%;
-  font-size: 20px;
+  font-size: 16px;
 
   input,
   textarea,
   &__selected {
-    padding: 1.2em 1.9em;
+    padding: 0.55em 1.05em;
     border-radius: 2em;
     width: 100%;
-    background-color: $white;
-    border: 2px solid $white;
+    background-color: $white-5;
+    border: 1px solid transparent;
     resize: none;
     transition: 0.3s ease-out;
+    border-radius: 10px;
 
     //font
     color: $black;
@@ -54,149 +55,12 @@
     font-size: inherit;
     line-height: 1;
     &::placeholder {
-      color: rgba($black, 0.4);
+      color: $black;
     }
   }
   input:focus,
   textarea:focus {
-    border-color: rgba($black, 0.8);
-  }
-  &--primary {
-    input {
-      background: $white;
-      border-color: rgba($black, 0.06);
-      box-shadow: 0px 1em 1.3em rgba($black, 0.22);
-      border-radius: 25;
-      &:focus {
-      }
-    }
-  }
-  &--underline {
-    input,
-    textarea,
-    &__selected {
-      padding: 1em 0.2em;
-      border-radius: 0;
-      border: 0;
-      border-bottom: 1px solid $white;
-    }
-  }
-  &--select {
-    position: relative;
-    min-width: 130px;
-    .input {
-      &__selected {
-        cursor: pointer;
-        transition-delay: 0.25s;
-
-        &:hover {
-          opacity: 0.8;
-          border-color: rgba($black, 0.8);
-        }
-
-        &:after {
-          color: inherit;
-          content: "";
-          position: absolute;
-          display: block;
-          top: 50%;
-          right: 1.2em;
-          width: 0;
-          height: 0;
-          border-bottom: 6px solid currentColor;
-          border-right: 6px solid transparent;
-          border-left: 6px solid transparent;
-          transform: translateY(-50%) rotate(180deg);
-          transition: 0.3s ease;
-        }
-      }
-      &__dropdown {
-        position: absolute;
-        top: calc(100% - 3px);
-        width: 100%;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        background-color: $white;
-        border: 2px solid transparent;
-        color: $black;
-        box-sizing: border-box;
-        border: 2px solid transparent;
-        border-radius: 0 0 2em 2em;
-        border-top: unset;
-        transition: max-height 0.3s ease, border-color 0s ease 0.3s,
-          opacity 0.1s ease 0.2s;
-        @include hideScroll;
-
-        z-index: 1;
-
-        &-item {
-          cursor: pointer;
-          padding: 0.4em 1em;
-          border-top: 1px solid rgba($black, 0.1);
-          transition: 0.3s ease-out;
-
-          &:hover {
-            background: $white;
-          }
-          &:first-child {
-            border-top: unset;
-          }
-          strong {
-            color: $black;
-            font-weight: 500;
-            pointer-events: none;
-          }
-          p {
-            pointer-events: none;
-          }
-        }
-      }
-    }
-
-    &.active .input {
-      &__selected {
-        color: $black;
-        border-radius: 2em 2em 0 0;
-        border-bottom: 1px solid rgba($black, 0.1);
-        border-color: $black;
-        transition-duration: 0.1s;
-        transition-delay: 0s;
-        &:after {
-          transform: translateY(-50%);
-        }
-      }
-      &__dropdown {
-        top: 100%;
-        max-height: 30vh;
-        overflow-y: auto;
-        border-color: $black;
-        opacity: 1;
-        padding: 0.5em 0 1em 0;
-        transition: max-height 0.4s ease, opacity 0.2s ease;
-      }
-    }
-  }
-  &--buttonRight {
-    position: relative;
-    input {
-      padding-right: 3em;
-    }
-    .button {
-      position: absolute;
-      font-size: inherit;
-      top: 50%;
-      right: 0.5em;
-      transform: translateY(-50%);
-    }
-    &._wideButton {
-      input {
-        padding-right: 8em;
-      }
-      .button {
-        width: 7em;
-      }
-    }
+    border-color: rgba($black-secondary, 0.8);
   }
 }
 .button {

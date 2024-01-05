@@ -1,0 +1,119 @@
+.about {
+  background: $black-secondary;
+  &__inner {
+    padding: 110px 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      h4 {
+        color: $primary;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.6;
+      }
+    }
+  }
+  p {
+    color: $white;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .titleBox {
+    h4 {
+      color: $primary;
+    }
+    h2 {
+      color: $white;
+      position: relative;
+      &::after {
+        background: #1b2663;
+        width: calc(100% - 25px);
+      }
+      span {
+        &.text--parent {
+          position: relative;
+          font-style: italic;
+        }
+      }
+      .ico {
+        font-size: inherit;
+        width: 0.59em;
+        height: 0.59em;
+        position: absolute;
+        top: -0.15em;
+        right: -0.21em;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin about-1380 {
+  .about {
+    .titleBox {
+      h2 {
+        &::after {
+          width: 63%;
+        }
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@mixin about-1150 {
+  .about {
+    &__inner {
+      padding: 90px 0 250px;
+    }
+  }
+}
+@mixin about-1025 {
+  .about {
+    &__inner {
+      padding: 70px 0 200px;
+    }
+  }
+}
+@mixin about-940 {
+  .about {
+    &__inner {
+      padding: 60px 0 150px;
+    }
+  }
+}
+@mixin about-860 {
+  .about {
+    &__inner {
+      gap: 40px;
+      padding: 60px 0 100px;
+      &-content {
+        gap: 40px;
+      }
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+@mixin about-580 {
+  .about {
+    &__inner {
+      gap: 30px;
+      padding: 60px 0 100px;
+      &-content {
+        gap: 30px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}

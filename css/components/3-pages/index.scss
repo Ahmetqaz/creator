@@ -973,6 +973,7 @@
 }
 .feedback {
   padding: 80px 0 220px;
+  position: relative;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -1065,6 +1066,9 @@
         }
       }
     }
+  }
+  .bg {
+    height: 77%;
   }
 }
 

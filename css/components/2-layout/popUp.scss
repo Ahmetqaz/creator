@@ -1,0 +1,168 @@
+.popUp {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  background: rgba($black-secondary, 0.7);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    &-container {
+      background: $white;
+      margin: auto;
+      width: 100%;
+      max-width: 1210px;
+      border-radius: 46px;
+      padding: 50px 30px 52px;
+      position: relative;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 718px;
+      margin: 0 auto;
+    }
+  }
+  .input {
+    textarea {
+      padding: 0.95em 1.05em;
+      min-height: 146px;
+      border-radius: 15px;
+    }
+    &._sm {
+      max-width: 180px;
+    }
+  }
+  .button {
+    z-index: 1;
+    &--primary {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 250px;
+      font-weight: 800;
+      font-family: $font-primary;
+    }
+    &--ico {
+      font-size: 24px;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      background: $primary;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: $primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $primary;
+        border-radius: inherit;
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 1.5px;
+        top: 1.5px;
+        border-radius: inherit;
+        background: $black-secondary;
+        @include transition;
+      }
+      .ico {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        font-size: inherit;
+        width: 0.95em;
+        height: 0.95em;
+      }
+      &:hover {
+        transform: unset;
+        opacity: 0.7;
+      }
+      &:active {
+        transform: translate(1.5px, 1.5px);
+        &::before {
+          transform: translate(-1.5px, -1.5px);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .titleBox {
+    h4 {
+      color: $primary;
+    }
+    h2 {
+      color: $black-secondary;
+    }
+  }
+  &.active {
+    display: flex;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+  }
+}
+// -------------------------------------
+@mixin popUp-768 {
+  .popUp {
+    &__inner {
+      &-container {
+        border-radius: 35px;
+      }
+    }
+    .button {
+      &--ico {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@mixin popUp-580 {
+  .popUp {
+    &__inner {
+      &-container {
+        border-radius: 25px;
+        padding: 40px 25px;
+      }
+    }
+    .button {
+      &--ico {
+        font-size: 18px;
+      }
+      &--primary {
+        font-size: 14px;
+      }
+    }
+    h2 {
+      display: flex;
+      flex-direction: column;
+      &:after {
+        width: 80%;
+      }
+    }
+  }
+}
+@mixin popUp-390 {
+  .popUp {
+    &__inner {
+      padding: 14px;
+      &-container {
+        padding: 30px 15px;
+      }
+    }
+  }
+}

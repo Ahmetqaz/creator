@@ -1,5 +1,6 @@
 @media (max-width: 1380px) {
   @include index-1380;
+  @include about-1380;
 }
 @media (max-width: 1280px) {
   @include typography-1280;
@@ -14,6 +15,7 @@
   @include header-1150;
   @include index-1150;
   @include footer-1150;
+  @include about-1150;
 }
 
 @media (max-width: 1025px) {
@@ -23,6 +25,7 @@
   @include typography-1025;
   @include index-1025;
   @include footer-1025;
+  @include about-1025;
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -31,11 +34,13 @@
   @include typography-940;
   @include index-940;
   @include footer-940;
+  @include about-940;
 }
 @media (max-width: 860px) {
   @include typography-860;
   @include header-860;
   @include index-860;
+  @include about-860;
 }
 @media (max-width: 768px) {
   .autoContainer {
@@ -44,6 +49,7 @@
   @include typography-768;
   @include index-768;
   @include footer-768;
+  @include popUp-768;
 }
 @media (max-width: 668px) {
   @include index-668;
@@ -51,6 +57,8 @@
 @media (max-width: 580px) {
   @include index-580;
   @include footer-580;
+  @include popUp-580;
+  @include about-580;
 }
 @media (max-width: 460px) {
   @include typography-460;
@@ -60,4 +68,5 @@
 @media (max-width: 390px) {
   @include typography-390;
   @include index-390;
+  @include popUp-390;
 }
