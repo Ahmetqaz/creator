@@ -2844,6 +2844,9 @@ svg {
   .hero__group .text--underline small {
     font-size: 60px;
   }
+  .clients {
+    padding: 130px 0;
+  }
   .clients__item-info {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2872,6 +2875,9 @@ svg {
   }
   .clients__item-banner {
     height: 175px;
+  }
+  .projects {
+    padding: 130px 0;
   }
   .projects__inner-row {
     gap: 20px;
@@ -2933,6 +2939,9 @@ svg {
   .hero__group .text--underline small {
     font-size: 56px;
   }
+  .clients {
+    padding: 110px 0;
+  }
   .clients__inner {
     gap: 60px;
   }
@@ -2946,6 +2955,9 @@ svg {
   .clients__shapes .shape._left {
     top: 105%;
     left: 5%;
+  }
+  .projects {
+    padding: 110px 0;
   }
   .help__inner {
     gap: 80px;
@@ -3036,6 +3048,9 @@ svg {
   .hero__group .text--underline small {
     font-size: 50px;
   }
+  .clients {
+    padding: 90px 0;
+  }
   .clients__inner {
     gap: 50px;
   }
@@ -3081,6 +3096,9 @@ svg {
   }
   .clients__shapes .shape._left {
     font-size: 18px;
+  }
+  .projects {
+    padding: 90px 0;
   }
   .help {
     padding: 98px 0 130px;
@@ -3376,6 +3394,9 @@ svg {
   .hero__image {
     width: 100%;
   }
+  .clients {
+    padding: 70px 0;
+  }
   .clients__inner {
     gap: 40px;
   }
@@ -3402,6 +3423,9 @@ svg {
     top: unset;
     bottom: -2%;
     left: 5%;
+  }
+  .projects {
+    padding: 70px 0;
   }
   .help {
     padding: 78px 0 100px;
@@ -3510,6 +3534,12 @@ svg {
   }
 }
 @media (max-width: 668px) {
+  .clients {
+    padding: 60px 0 40px;
+  }
+  .projects {
+    padding: 40px 0 60px;
+  }
   .projects .titleBox .text--underline {
     display: -webkit-box;
     display: -ms-flexbox;

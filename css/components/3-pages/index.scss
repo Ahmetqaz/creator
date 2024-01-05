@@ -1113,6 +1113,7 @@
     }
   }
   .clients {
+    padding: 130px 0;
     &__item {
       &-info {
         flex-wrap: wrap;
@@ -1145,6 +1146,7 @@
     }
   }
   .projects {
+    padding: 130px 0;
     &__inner {
       &-row {
         gap: 20px;
@@ -1212,6 +1214,7 @@
     }
   }
   .clients {
+    padding: 110px 0;
     &__inner {
       gap: 60px;
     }
@@ -1230,6 +1233,9 @@
         }
       }
     }
+  }
+  .projects {
+    padding: 110px 0;
   }
   .help {
     &__inner {
@@ -1290,6 +1296,7 @@
     }
   }
   .clients {
+    padding: 90px 0;
     &__inner {
       gap: 50px;
     }
@@ -1336,6 +1343,9 @@
         }
       }
     }
+  }
+  .projects {
+    padding: 90px 0;
   }
   .help {
     padding: 98px 0 130px;
@@ -1439,6 +1449,7 @@
     }
   }
   .clients {
+    padding: 70px 0;
     &__inner {
       gap: 40px;
     }
@@ -1474,6 +1485,9 @@
         }
       }
     }
+  }
+  .projects {
+    padding: 70px 0;
   }
   .help {
     padding: 78px 0 100px;
@@ -1551,7 +1565,11 @@
   }
 }
 @mixin index-668 {
+  .clients {
+    padding: 60px 0 40px;
+  }
   .projects {
+    padding: 40px 0 60px;
     .titleBox {
       .text--underline {
         display: flex;
