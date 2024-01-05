@@ -1152,6 +1152,9 @@ svg {
 .footer--bg .footer__inner-link {
   color: #fff;
 }
+.footer--bg .footer__inner-link:hover {
+  color: #4360f6;
+}
 .footer--bg .button--ico {
   color: #fff;
 }

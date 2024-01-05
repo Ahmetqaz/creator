@@ -113,11 +113,14 @@
       &__inner {
         &-link {
           color: $white;
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }
-    .button{
-      &--ico{
+    .button {
+      &--ico {
         color: $white;
       }
     }
