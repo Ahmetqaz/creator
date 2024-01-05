@@ -1,8 +1,17 @@
 const settings = {
-  testimonials: {
-    slidesPerView: "auto",
-    spaceBetween: 15,
-    breakpoints: {},
+  clients: {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: false,
+      slideShadows: false,
+    },
+    breakpoints: {
+      460: {
+      },
+    },
   },
 };
 

@@ -1,31 +1,63 @@
-@media (max-width: 1280px) {
+@media (max-width: 1380px) {
+  @include index-1380;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1280px) {
+  @include typography-1280;
+  @include index-1280;
+  @include footer-1280;
+}
+@media (max-width: 1150px) {
   .autoContainer {
     padding: 0 40px;
   }
+  @include typography-1150;
+  @include header-1150;
+  @include index-1150;
+  @include footer-1150;
 }
+
 @media (max-width: 1025px) {
   .autoContainer {
     padding: 0 30px;
   }
-  @include header-1025;
+  @include typography-1025;
+  @include index-1025;
+  @include footer-1025;
 }
-
 @media (max-width: 940px) {
   .autoContainer {
     padding: 0 25px;
   }
+  @include typography-940;
+  @include index-940;
+  @include footer-940;
+}
+@media (max-width: 860px) {
+  @include typography-860;
+  @include header-860;
+  @include index-860;
 }
 @media (max-width: 768px) {
   .autoContainer {
     padding: 0 15px;
   }
+  @include typography-768;
+  @include index-768;
+  @include footer-768;
+}
+@media (max-width: 668px) {
+  @include index-668;
 }
 @media (max-width: 580px) {
-  ._hideMob {
-    display: none;
-  }
+  @include index-580;
+  @include footer-580;
 }
 @media (max-width: 460px) {
+  @include typography-460;
+  @include index-460;
+  @include footer-460;
+}
+@media (max-width: 390px) {
+  @include typography-390;
+  @include index-390;
 }

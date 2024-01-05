@@ -17,8 +17,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css" />
   <link rel="icon" href="images/logo-sm.svg" />
   <title>Home</title>
 </head>
@@ -44,7 +44,9 @@
                 </span>
               </button>
             </div>
-            <button class="burger" id="menuBtn"></button>
+          </div>
+          <div class="burger" id="menuBtn">
+            <span></span>
           </div>
         </div>
     </header>
@@ -61,7 +63,7 @@
                     Build and
                   </span>
                   <div class="hero__group-box">
-                    <strong>
+                    <strong class="text--lg">
                       Scale
                     </strong>
                     <div class="hero__group-ico">
@@ -122,16 +124,17 @@
                   <img src="./images/intro/line-right.svg" alt="line-left">
                 </div>
                 <div class="shape">
-                  <span>
-                  </span>
                 </div>
                 <div class="shape _top">
-                  <span>
-                  </span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="bg__image">
+          <img src="./images/bg-shape.png" alt="bg">
         </div>
       </div>
     </section>
@@ -139,7 +142,7 @@
     <!-- #clients start -->
     <section class="clients">
       <div class="autoContainer">
-        <div class="clients__inner">
+        <div class="clients__inner" data-swiper-parent>
           <div class="titleBox">
             <h4>
               HOW WE’VE HELPED
@@ -148,125 +151,365 @@
               OUR CLIENTS
             </h2>
           </div>
-          <div class="clients__inner-container">
-            <div class="clients__item">
-              <div class="clients__item-banner">
-                <img src="./images/clients/banner-1.png" alt="banner">
-              </div>
-              <div class="clients__item-row">
-                <div class="clients__item-group">
-                  <div class="clients__item-avatar">
-                    <img src="./images/clients/avatar-1.png" alt="avatar">
-                  </div>
-                  <h5 class="_lg">
-                    @dmac
-                  </h5>
-                  <div class="clients__item-box">
-                    <span>
-                      Start Date:
-                    </span>
-                    <strong>
-                      September 11, 2023
-                    </strong>
+          <div class="clients__inner-slider">
+            <div class="clients__inner-container swiper" data-swiper="clients">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="clients__item">
+                    <div class="clients__item-banner">
+                      <img src="./images/clients/banner-1.png" alt="banner">
+                    </div>
+                    <div class="clients__item-row">
+                      <div class="clients__item-group">
+                        <div class="clients__item-avatar">
+                          <img src="./images/clients/avatar-1.png" alt="avatar">
+                        </div>
+                        <div class="clients__item-group-info">
+                          <h5 class="_lg">
+                            @dmac
+                          </h5>
+                          <div class="clients__item-box">
+                            <span>
+                              Start Date:
+                            </span>
+                            <strong>
+                              September 11, 2023
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clients__item-content">
+                        <div class="clients__item-wrapper">
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                Before
+                              </strong>
+                              <span>
+                                Working Together
+                              </span>
+                            </h5>
+                            <div class="clients__item-text">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                $750 / mo
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                60,000
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                9,000,000
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                After
+                              </strong>
+                              <span>
+                                Working Together
+                              </span>
+                            </h5>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                $2,500+ / mo
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                100,000+
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                15,000,000+
+                              </strong>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Daniel was killing it on short form content but was making below $1,000/mo on average. He
+                          wanted
+                          to
+                          grow his brand beyond just short form videos, so we helped transition him to making long form
+                          video
+                          content as well. Safe to say this was a great decision. In 3 months, we helped Daniel amass
+                          750k
+                          views on his long form content, more than doubled his monthly revenue (not even working with
+                          sponsors yet!), and reached 100k+ subscribers after starting at roughly 60k subscribers 3
+                          months
+                          ago.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="clients__item-content">
-                  <div class="clients__item-wrapper">
-                    <div class="clients__item-info">
-                      <h5 class="_lg">
-                        <strong>
-                          Before
-                        </strong>
-                        <span>
-                          Working Together
-                        </span>
-                      </h5>
-                      <div class="clients__item-text">
-                        <span>
-                          Revenue
-                        </span>
-                        <strong>
-                          $750 / mo
-                        </strong>
-                      </div>
-                      <div class="clients__item-text">
-                        <span>
-                          Subscribers
-                        </span>
-                        <strong>
-                          60,000
-                        </strong>
-                      </div>
-                      <div class="clients__item-text">
-                        <span>
-                          Monthly Views
-                        </span>
-                        <strong>
-                          9,000,000
-                        </strong>
-                      </div>
+                <div class="swiper-slide">
+                  <div class="clients__item _brown">
+                    <div class="clients__item-banner">
+                      <img src="./images/clients/banner-2.png" alt="banner">
                     </div>
-                    <div class="clients__item-info">
-                      <h5 class="_lg">
-                        <strong>
-                          After
-                        </strong>
-                        <span>
-                          Working Together
-                        </span>
-                      </h5>
-                      <div class="clients__item-text _secondary">
-                        <span>
-                          Revenue
-                        </span>
-                        <strong>
-                          $2,500+ / mo
-                        </strong>
+                    <div class="clients__item-row">
+                      <div class="clients__item-group">
+                        <div class="clients__item-avatar ">
+                          <img src="./images/clients/avatar-2.png" alt="avatar">
+                        </div>
+                        <div class="clients__item-group-info">
+                          <h5 class="_lg">
+                            @baxate
+                          </h5>
+                          <div class="clients__item-box">
+                            <span>
+                              Start Date:
+                            </span>
+                            <strong>
+                              October 20, 2023
+                            </strong>
+                          </div>
+                        </div>
                       </div>
-                      <div class="clients__item-text _secondary">
-                        <span>
-                          Subscribers
-                        </span>
-                        <strong>
-                          100,000+
-                        </strong>
-                      </div>
-                      <div class="clients__item-text _secondary">
-                        <span>
-                          Monthly Views
-                        </span>
-                        <strong>
-                          15,000,000+
-                        </strong>
+                      <div class="clients__item-content">
+                        <div class="clients__item-wrapper">
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                Before
+                              </strong>
+                              <span>
+                                Working Together
+                              </span>
+                            </h5>
+                            <div class="clients__item-text">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                N/A
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                3,500
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                2,500
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                After
+                              </strong>
+                              <span>
+                                Working Together
+                              </span>
+                            </h5>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                $100+ / mo
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                7,000+
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                15,000+
+                              </strong>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          When we first began, Baxate was a man of great influence on TikTok/IG and he wanted to take
+                          that influence to YouTube, knowing that’s where he’d be able to grow the most committed
+                          audience over time. In less than two months we helped him get his channel monetized, gain 3k+
+                          new subscribers, and get 100k+ views. We’ve helped professionally produce his podcast for
+                          release on YouTube and Spotify and made engaging clips that have amassed 1M+ views in short
+                          form media.
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <p>
-                    Daniel was killing it on short form content but was making below $1,000/mo on average. He wanted to
-                    grow his brand beyond just short form videos, so we helped transition him to making long form video
-                    content as well. Safe to say this was a great decision. In 3 months, we helped Daniel amass 750k
-                    views on his long form content, more than doubled his monthly revenue (not even working with
-                    sponsors yet!), and reached 100k+ subscribers after starting at roughly 60k subscribers 3 months
-                    ago.
-                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="clients__item _gray">
+                    <div class="clients__item-banner">
+                      <img src="./images/clients/banner-3.png" alt="banner">
+                    </div>
+                    <div class="clients__item-row">
+                      <div class="clients__item-group">
+                        <div class="clients__item-avatar">
+                          <img src="./images/clients/avatar-3.png" alt="avatar">
+                        </div>
+                        <div class="clients__item-group-info">
+                          <h5 class="_lg">
+                            @gavinherman
+                          </h5>
+                          <div class="clients__item-box">
+                            <span>
+                              Start Date:
+                            </span>
+                            <strong>
+                              July 11, 2023
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clients__item-content">
+                        <div class="clients__item-wrapper">
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                Before
+                              </strong>
+                              <span>
+                                I Started
+                              </span>
+                            </h5>
+                            <div class="clients__item-text">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                N/A
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                250
+                              </strong>
+                            </div>
+                            <div class="clients__item-text">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                500
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="clients__item-info">
+                            <h5 class="_lg">
+                              <strong>
+                                After
+                              </strong>
+                              <span>
+                                Starting
+                              </span>
+                            </h5>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Revenue
+                              </span>
+                              <strong>
+                                $250+ / mo
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Subscribers
+                              </span>
+                              <strong>
+                                1,640+
+                              </strong>
+                            </div>
+                            <div class="clients__item-text _secondary">
+                              <span>
+                                Monthly Views
+                              </span>
+                              <strong>
+                                25,000+
+                              </strong>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Well this is fun. I’m Gavin, hey! In late July of 2023 I decided to pick the camera back up
+                          and start making videos again. Though I have only uploaded a video roughly every 3 weeks, I
+                          have amassed 1k+ subscribers in less then 4 months. I also got just under 100k views and the
+                          channel will be monetized in the next month. Though I have only made roughly $1,000 from the
+                          channel itself, it has helped me land clients and shows that it’s possible to start at
+                          nothing.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="clients__inner-arrow">
-              <span class="ico">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.500001 10.8937L19.25 21.719L19.25 0.0683586L0.500001 10.8937Z" fill="currentCollor" />
-                </svg>
-              </span>
-            </button>
-            <button class="clients__inner-arrow _right">
-              <span class="ico">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5 10.8937L0.749999 21.719L0.75 0.0683586L19.5 10.8937Z" fill="currentCollor" />
-                </svg>
-              </span>
-            </button>
+            <div class="swiper-arrows">
+              <button class="clients__inner-arrow swiper-arrow-prev">
+                <span class="ico">
+                  <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.500001 10.8937L19.25 21.719L19.25 0.0683586L0.500001 10.8937Z" fill="currentCollor" />
+                  </svg>
+                </span>
+              </button>
+              <button class="clients__inner-arrow swiper-arrow-next _right">
+                <span class="ico">
+                  <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.5 10.8937L0.749999 21.719L0.75 0.0683586L19.5 10.8937Z" fill="currentCollor" />
+                  </svg>
+                </span>
+              </button>
+            </div>
           </div>
+          <div class="clients__shapes">
+            <div class="shape _top">
+            </div>
+            <div class="shape _right">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="bg__image">
+          <img src="./images/bg-shape.png" alt="bg">
         </div>
       </div>
     </section>
@@ -280,23 +523,28 @@
               EVEN MORE
             </h4>
             <h2 class="text--underline">
-              PROJECTS WE’VE WORKED ON
+              <span>
+                PROJECTS WE’VE
+              </span>
+              <span class="noBreak">
+                WORKED ON
+              </span>
             </h2>
           </div>
-          <div class="projects__inner-container">
+          <div class="projects__inner-container tabWrapper">
             <div class="projects__inner-group">
-              <button class="projects__inner-button active">
+              <button class="projects__inner-button active tabBtn" data-tab="#project-1">
                 <span>
                   LONG FORM
                 </span>
               </button>
-              <button class="projects__inner-button">
+              <button class="projects__inner-button tabBtn" data-tab="#project-2">
                 <span>
                   SHORT FORM
                 </span>
               </button>
             </div>
-            <div class="projects__inner-row">
+            <div class="projects__inner-row active tabEvent" id="project-1">
               <div class="projects__inner-item">
                 <div class="ratioImage">
                   <iframe src="https://www.youtube.com/embed/rohsBbXHfEA?si=REyxiMbjCu_EGkHE"></iframe>
@@ -344,7 +592,61 @@
                 </div>
               </div>
             </div>
+            <div class="projects__inner-row tabEvent" id="project-2">
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/embed/BQUPv6Q_Ua8?si=ZZHMiCdeFe8n9Pnb"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/embed/1qBF8PARldo?si=FJ3Zgei0-ot6rNw3"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/embed/i26Az3c34n0?si=43HHJEVfWJcFuM2f"
+                    title="YouTube video player"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/watch?v=Qlr3E8ucOP0&t=1326s"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/watch?v=3olCSaJ_OQs"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/watch?v=MD5-HByRxoA"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/watch?v=Nd9rdmDtZ3A"></iframe>
+                </div>
+              </div>
+              <div class="projects__inner-item">
+                <div class="ratioImage">
+                  <iframe src="https://www.youtube.com/watch?v=kntcUApUBoM"></iframe>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="projects__shapes">
+            <div class="shape _left">
+            </div>
+            <div class="shape _right">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="bg__image">
+          <img src="./images/bg-shape.png" alt="bg">
         </div>
       </div>
     </section>
@@ -363,10 +665,10 @@
           </div>
           <div class="help__inner-container">
             <div class="help__item">
-              <div class="help__item-group">
-                <h4>
+              <div class="help__item-text">
+                <span>
                   Cohesive Digital Brand Creation
-                </h4>
+                </span>
               </div>
               <p>
                 If you don’t have brand guidelines in place, we create that for you. Things like logos, banners, fonts,
@@ -378,10 +680,10 @@
               </div>
             </div>
             <div class="help__item">
-              <div class="help__item-group">
-                <h4>
+              <div class="help__item-text">
+                <span>
                   Strategic Brand Positioning
-                </h4>
+                </span>
               </div>
               <p>
                 Once onboarded, we will speak about how we can position your social media channels to best sell your
@@ -393,10 +695,10 @@
               </div>
             </div>
             <div class="help__item">
-              <div class="help__item-group">
-                <h4>
+              <div class="help__item-text">
+                <span>
                   Digital Brand Management
-                </h4>
+                </span>
               </div>
               <p>
                 Operate and control the brand identity, visibility, and credibility. Establish the company on socials,
@@ -408,10 +710,10 @@
               </div>
             </div>
             <div class="help__item">
-              <div class="help__item-group">
-                <h4>
+              <div class="help__item-text">
+                <span>
                   Video Content Creation
-                </h4>
+                </span>
               </div>
               <p>
                 Done for you video post-production and strategic uploading to YouTube, TikTok, Instagram. This includes
@@ -419,6 +721,16 @@
               </p>
             </div>
           </div>
+          <div class="help__shapes">
+            <div class="shape _top">
+            </div>
+            <div class="shape _left">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="help__bg">
+        <div class="shape _right">
         </div>
       </div>
     </section>
@@ -435,7 +747,7 @@
               FAQs
             </h2>
           </div>
-          <div class="faq__inner-container">
+          <div class="faq__inner-container tabWrapper">
             <div class="faq__tab">
               <button class="faq__tab-button tabBtn" data-tab="#faq-1">
                 <span>
@@ -517,6 +829,12 @@
               </div>
             </div>
           </div>
+          <div class="faq__shapes">
+            <div class="shape _left">
+            </div>
+            <div class="shape _right">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -543,6 +861,19 @@
                 style="min-width:320px;height:720px;"></div>
             </div>
           </div>
+          <div class="feedback__shapes">
+            <div class="shape _top">
+            </div>
+            <div class="shape _right">
+            </div>
+            <div class="shape _bottom">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="bg__image">
+          <img src="./images/bg-shape.png" alt="bg">
         </div>
       </div>
     </section>
@@ -553,16 +884,18 @@
         <div class="footer__inner">
           <div class="footer__inner-row">
             <div class="footer__inner-container">
-              <h5>
-                Contact Us
-              </h5>
-              <div class="footer__inner-box">
-                <a href="#" class="footer__inner-link">
-                  gavin@vontent.co
-                </a>
-                <a href="#" class="footer__inner-link">
-                  425 394 3733
-                </a>
+              <div class="footer__inner-info">
+                <h5>
+                  Contact Us
+                </h5>
+                <div class="footer__inner-box">
+                  <a href="#" class="footer__inner-link">
+                    gavin@vontent.co
+                  </a>
+                  <a href="#" class="footer__inner-link">
+                    425 394 3733
+                  </a>
+                </div>
               </div>
             </div>
             <div class="footer__inner-container">
@@ -653,6 +986,7 @@
     <!-- #footer end -->
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js"></script>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="js/main.js"></script>
 

@@ -26,6 +26,9 @@
     transform: scale(0.95);
   }
 }
+.noBreak {
+  white-space: nowrap;
+}
 
 .input {
   display: flex;
@@ -558,9 +561,7 @@
     }
   }
 }
-.noBreak {
-  white-space: nowrap;
-}
+
 .stepper {
   display: flex;
   align-items: flex-start;
@@ -745,7 +746,7 @@
       height: 5px;
       background-color: #e4e8ff;
       position: absolute;
-      bottom: 16px;
+      bottom: 0.25em;
       left: 50%;
       z-index: -1;
       transform: translateX(-50%);
