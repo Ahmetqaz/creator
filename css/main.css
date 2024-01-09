@@ -161,6 +161,282 @@
           animation-timing-function: ease-in-out;
 }
 
+.anim-hero-scale {
+  -webkit-animation: hero-scale-anim 1s cubic-bezier(0.075, 0.82, 0.165, 1) alternate infinite;
+          animation: hero-scale-anim 1s cubic-bezier(0.075, 0.82, 0.165, 1) alternate infinite;
+}
+@-webkit-keyframes hero-scale-anim {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+@keyframes hero-scale-anim {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+.anim-hero-floaty {
+  animation: hero-floaty-anim 15s ease-in-out alternate-reverse infinite;
+}
+@-webkit-keyframes hero-floaty-anim {
+  from {
+    -webkit-transform: translateY(-4%) scale(0.99);
+            transform: translateY(-4%) scale(0.99);
+  }
+  to {
+    -webkit-transform: translateY(4%) scale(1.01);
+            transform: translateY(4%) scale(1.01);
+  }
+}
+@keyframes hero-floaty-anim {
+  from {
+    -webkit-transform: translateY(-4%) scale(0.99);
+            transform: translateY(-4%) scale(0.99);
+  }
+  to {
+    -webkit-transform: translateY(4%) scale(1.01);
+            transform: translateY(4%) scale(1.01);
+  }
+}
+.anim-hero-floaty:nth-child(2) {
+  -webkit-animation-duration: 26s;
+          animation-duration: 26s;
+  animation-direction: alternate-reverse;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.anim-hero-floaty:nth-child(3) {
+  -webkit-animation-duration: 22s;
+          animation-duration: 22s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.anim-hero-floaty:nth-child(4) {
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.anim-hero-floaty:nth-child(5) {
+  -webkit-animation-duration: 14s;
+          animation-duration: 14s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  animation-direction: alternate-reverse;
+}
+.anim-hero-float {
+  -webkit-animation: hero-float-anim 5s ease-in-out alternate infinite;
+          animation: hero-float-anim 5s ease-in-out alternate infinite;
+}
+@-webkit-keyframes hero-float-anim {
+  from {
+    -webkit-transform: translate(-5%, -6%) scale(0.99);
+            transform: translate(-5%, -6%) scale(0.99);
+  }
+  to {
+    -webkit-transform: translate(3%, 8%) scale(1.01);
+            transform: translate(3%, 8%) scale(1.01);
+  }
+}
+@keyframes hero-float-anim {
+  from {
+    -webkit-transform: translate(-5%, -6%) scale(0.99);
+            transform: translate(-5%, -6%) scale(0.99);
+  }
+  to {
+    -webkit-transform: translate(3%, 8%) scale(1.01);
+            transform: translate(3%, 8%) scale(1.01);
+  }
+}
+.anim-hero-float:nth-child(2) {
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  animation-direction: alternate-reverse;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.anim-hero-float:nth-child(3) {
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.anim-hero-float:nth-child(4) {
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.anim-hero-float:nth-child(5) {
+  -webkit-animation-duration: 14s;
+          animation-duration: 14s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  animation-direction: alternate-reverse;
+}
+@-webkit-keyframes hero-stroke-anim {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+@keyframes hero-stroke-anim {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+.anim-hero-stroke svg path {
+  animation: hero-stroke-anim 25s linear reverse infinite;
+}
+.anim-hero-stroke._right svg path {
+  -webkit-animation-direction: unset;
+          animation-direction: unset;
+}
+.anim-shape-float {
+  -webkit-animation: float-shape 14s linear alternate infinite;
+          animation: float-shape 14s linear alternate infinite;
+}
+@-webkit-keyframes float-shape {
+  0% {
+    -webkit-transform: translate(5%, 60%) scale(1.15) rotate(90deg);
+            transform: translate(5%, 60%) scale(1.15) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(0.9) rotate(60deg);
+            transform: translate(0%, 0%) scale(0.9) rotate(60deg);
+  }
+  100% {
+    -webkit-transform: translate(-10%, -60%) scale(1.1) rotate(30deg);
+            transform: translate(-10%, -60%) scale(1.1) rotate(30deg);
+    opacity: 0.8;
+  }
+}
+@keyframes float-shape {
+  0% {
+    -webkit-transform: translate(5%, 60%) scale(1.15) rotate(90deg);
+            transform: translate(5%, 60%) scale(1.15) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(0.9) rotate(60deg);
+            transform: translate(0%, 0%) scale(0.9) rotate(60deg);
+  }
+  100% {
+    -webkit-transform: translate(-10%, -60%) scale(1.1) rotate(30deg);
+            transform: translate(-10%, -60%) scale(1.1) rotate(30deg);
+    opacity: 0.8;
+  }
+}
+.anim-shape-float:nth-child(1) {
+  animation-direction: alternate-reverse;
+}
+.anim-shape-float:nth-child(2) {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.anim-shape-floatx {
+  -webkit-animation: floatx-shape 14s linear alternate infinite;
+          animation: floatx-shape 14s linear alternate infinite;
+}
+@-webkit-keyframes floatx-shape {
+  0% {
+    -webkit-transform: translate(55%, 60%) scale(1.15) rotate(30deg);
+            transform: translate(55%, 60%) scale(1.15) rotate(30deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(1) rotate(10deg);
+            transform: translate(0%, 0%) scale(1) rotate(10deg);
+  }
+  100% {
+    -webkit-transform: translate(-60%, -60%) scale(1.1) rotate(30deg);
+            transform: translate(-60%, -60%) scale(1.1) rotate(30deg);
+    opacity: 0.8;
+  }
+}
+@keyframes floatx-shape {
+  0% {
+    -webkit-transform: translate(55%, 60%) scale(1.15) rotate(30deg);
+            transform: translate(55%, 60%) scale(1.15) rotate(30deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(1) rotate(10deg);
+            transform: translate(0%, 0%) scale(1) rotate(10deg);
+  }
+  100% {
+    -webkit-transform: translate(-60%, -60%) scale(1.1) rotate(30deg);
+            transform: translate(-60%, -60%) scale(1.1) rotate(30deg);
+    opacity: 0.8;
+  }
+}
+.anim-shape-floatx:nth-child(1) {
+  animation-direction: alternate-reverse;
+}
+.anim-shape-floatx:nth-child(2) {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.anim-shape-floatlg {
+  -webkit-animation: floatlg-shape 14s linear alternate infinite;
+          animation: floatlg-shape 14s linear alternate infinite;
+}
+@-webkit-keyframes floatlg-shape {
+  0% {
+    -webkit-transform: translate(5%, 10%) scale(1.05);
+            transform: translate(5%, 10%) scale(1.05);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(-5%, -10%) scale(1.05);
+            transform: translate(-5%, -10%) scale(1.05);
+    opacity: 0.8;
+  }
+}
+@keyframes floatlg-shape {
+  0% {
+    -webkit-transform: translate(5%, 10%) scale(1.05);
+            transform: translate(5%, 10%) scale(1.05);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(-5%, -10%) scale(1.05);
+            transform: translate(-5%, -10%) scale(1.05);
+    opacity: 0.8;
+  }
+}
+.anim-shape-floatlg:nth-child(1) {
+  animation-direction: alternate-reverse;
+}
+.anim-shape-floatlg:nth-child(2) {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 /* Typography */
 h1 {
   font-size: 64px;
@@ -1644,7 +1920,8 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.hero__image-item img {
+.hero__image-item img,
+.hero__image-item svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -2121,14 +2398,19 @@ svg {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(67, 96, 246)), to(rgb(253, 253, 253)));
   background: linear-gradient(to bottom, rgb(67, 96, 246), rgb(253, 253, 253));
 }
+.clients .bg {
+  z-index: -2;
+}
 .clients .bg::after {
   content: "";
   width: 100%;
-  height: 226px;
+  height: 326px;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 0;
   background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, #fff), color-stop(70%, #fff), to(transparent));
+  background: linear-gradient(transparent 0%, #fff 30%, #fff 70%, transparent 100%);
 }
 
 .projects {
@@ -2317,6 +2599,8 @@ svg {
   position: relative;
 }
 .help__inner-container {
+  position: relative;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2324,6 +2608,28 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.help__inner-container-line {
+  position: absolute;
+  z-index: -1;
+  left: 15%;
+  height: 100%;
+  width: auto;
+}
+.help__inner-container-line svg {
+  height: 90%;
+  width: auto;
+}
+.help__inner-container-line-progress {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d1333;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 .help__item {
   display: -webkit-box;
@@ -2335,7 +2641,10 @@ svg {
   gap: 35px;
   position: relative;
   z-index: 1;
-  padding-bottom: 115px;
+  padding: 90px 0;
+}
+.help__item:first-child {
+  padding-top: 0;
 }
 .help__item-text {
   width: 100%;
@@ -2347,6 +2656,11 @@ svg {
   background: linear-gradient(90deg, #4360f6 0%, #0d1333 94.04%);
   font-weight: 600;
   color: #DBF4FF;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: 0.3s ease-out 0.12s;
+  transition: 0.3s ease-out 0.12s;
 }
 .help__item p {
   -webkit-box-flex: 1;
@@ -2355,30 +2669,39 @@ svg {
   max-width: 705px;
   color: #DBF4FF;
   font-weight: 500;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
-.help__item-shape {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: -1;
-  height: 85%;
-  bottom: -10px;
-  left: 13%;
+.help__item.done p {
+  opacity: 1 !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+  -webkit-transition: 0.3s ease-out 0.12s;
+  transition: 0.3s ease-out 0.12s;
 }
-.help__item-shape._right {
-  left: 16%;
+.help__item.active p {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: 0.3s ease-out 0.12s;
+  transition: 0.3s ease-out 0.12s;
 }
-.help__item-shape img {
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.help__item.done .help__item-text {
+  opacity: 1 !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.help__item.active .help__item-text {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .help .titleBox h4 {
   color: #4360f6;
@@ -3175,12 +3498,15 @@ svg {
   .help__inner-container {
     gap: 70px;
   }
+  .help__inner-container-line svg path {
+    stroke-width: 3;
+  }
   .help__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: unset;
+    padding: 60px 0;
     gap: 24px;
   }
   .help__item-text {
@@ -3646,6 +3972,9 @@ svg {
     top: 100px;
     right: 0%;
   }
+  .help__inner-container-line svg path {
+    stroke-width: 2;
+  }
   .help .shape._top {
     font-size: 18px;
     right: 0%;
@@ -3786,6 +4115,9 @@ svg {
   }
   .help {
     border-radius: 16px;
+  }
+  .help__item {
+    padding: 40px 0;
   }
   .help__item-text {
     font-size: 16px;

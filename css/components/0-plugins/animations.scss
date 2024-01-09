@@ -68,8 +68,180 @@
   -webkit-animation-name: animInUp;
   animation-name: animInUp;
 }
-
 .zoomInCenter {
   animation-name: zoomInCenter;
   animation-timing-function: ease-in-out;
+}
+
+.anim {
+  &-hero {
+    &-scale {
+      @keyframes hero-scale-anim {
+        from {
+          transform: scale(0.95);
+        }
+        to {
+          transform: scale(1.05);
+        }
+      }
+      animation: hero-scale-anim 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+        alternate infinite;
+    }
+    &-floaty {
+      @keyframes hero-floaty-anim {
+        from {
+          transform: translateY(-4%) scale(0.99);
+        }
+        to {
+          transform: translateY(4%) scale(1.01);
+        }
+      }
+
+      animation: hero-floaty-anim 15s ease-in-out alternate-reverse infinite;
+
+      &:nth-child(2) {
+        animation-duration: 26s;
+        animation-direction: alternate-reverse;
+        animation-delay: 2s;
+      }
+      &:nth-child(3) {
+        animation-duration: 22s;
+        animation-delay: 1s;
+      }
+      &:nth-child(4) {
+        animation-duration: 15s;
+        animation-delay: 3s;
+      }
+      &:nth-child(5) {
+        animation-duration: 14s;
+        animation-delay: 0.3s;
+        animation-direction: alternate-reverse;
+      }
+    }
+    &-float {
+      @keyframes hero-float-anim {
+        from {
+          transform: translate(-5%, -6%) scale(0.99);
+        }
+        to {
+          transform: translate(3%, 8%) scale(1.01);
+        }
+      }
+
+      animation: hero-float-anim 5s ease-in-out alternate infinite;
+
+      &:nth-child(2) {
+        animation-duration: 16s;
+        animation-direction: alternate-reverse;
+        animation-delay: 2s;
+      }
+      &:nth-child(3) {
+        animation-duration: 12s;
+        animation-delay: 1s;
+      }
+      &:nth-child(4) {
+        animation-duration: 15s;
+        animation-delay: 3s;
+      }
+      &:nth-child(5) {
+        animation-duration: 14s;
+        animation-delay: 0.3s;
+        animation-direction: alternate-reverse;
+      }
+    }
+    &-stroke {
+      @keyframes hero-stroke-anim {
+        to {
+          stroke-dashoffset: 200;
+        }
+      }
+
+      svg {
+        path {
+          animation: hero-stroke-anim 25s linear reverse infinite;
+        }
+      }
+      &._right {
+        svg {
+          path {
+            animation-direction: unset;
+          }
+        }
+      }
+    }
+  }
+  &-shape {
+    &-float {
+      @keyframes float-shape {
+        0% {
+          transform: translate(5%, 60%) scale(1.15) rotate(90deg);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translate(0%, 0%) scale(0.9) rotate(60deg);
+        }
+        100% {
+          transform: translate(-10%, -60%) scale(1.1) rotate(30deg);
+          opacity: 0.8;
+        }
+      }
+      animation: float-shape 14s linear alternate infinite;
+
+      &:nth-child(1) {
+        animation-direction: alternate-reverse;
+      }
+      &:nth-child(2) {
+        animation-duration: 20s;
+        animation-delay: 1s;
+      }
+    }
+    &-floatx {
+      @keyframes floatx-shape {
+        0% {
+          transform: translate(55%, 60%) scale(1.15) rotate(30deg);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translate(0%, 0%) scale(1) rotate(10deg);
+        }
+        100% {
+          transform: translate(-60%, -60%) scale(1.1) rotate(30deg);
+          opacity: 0.8;
+        }
+      }
+      animation: floatx-shape 14s linear alternate infinite;
+
+      &:nth-child(1) {
+        animation-direction: alternate-reverse;
+      }
+      &:nth-child(2) {
+        animation-duration: 10s;
+        animation-delay: 1s;
+      }
+    }
+    &-floatlg {
+      @keyframes floatlg-shape {
+        0% {
+          transform: translate(5%, 10%) scale(1.05);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translate(0%, 0%) scale(1);
+        }
+        100% {
+          transform: translate(-5%, -10%) scale(1.05);
+          opacity: 0.8;
+        }
+      }
+      animation: floatlg-shape 14s linear alternate infinite;
+
+      &:nth-child(1) {
+        animation-direction: alternate-reverse;
+      }
+      &:nth-child(2) {
+        animation-duration: 10s;
+        animation-delay: 1s;
+      }
+    }
+  }
 }

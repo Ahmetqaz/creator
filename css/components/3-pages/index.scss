@@ -129,7 +129,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      img {
+      img,
+      svg {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -194,6 +195,7 @@
       }
     }
   }
+
   .autoContainer {
     width: 100%;
     display: flex;
@@ -209,6 +211,7 @@
   height: 100%;
   pointer-events: none;
   z-index: -1;
+
   &__image {
     display: flex;
     align-items: center;
@@ -535,14 +538,21 @@
     }
   }
   .bg {
+    z-index: -2;
     &::after {
       content: "";
       width: 100%;
-      height: 226px;
+      height: 326px;
       position: absolute;
-      top: 15%;
+      top: 10%;
       left: 0;
       background: $white;
+      background: linear-gradient(
+        transparent 0%,
+        $white 30%,
+        $white 70%,
+        transparent 100%
+      );
     }
   }
 }
@@ -711,8 +721,34 @@
     gap: 104px;
     position: relative;
     &-container {
+      position: relative;
+      z-index: 0;
       display: flex;
       flex-direction: column;
+
+      &-line {
+        position: absolute;
+        z-index: -1;
+        left: 15%;
+
+        height: 100%;
+        width: auto;
+
+        svg {
+          height: 90%;
+          width: auto;
+        }
+        &-progress {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $black-secondary;
+          transition: 0.2s linear;
+        }
+      }
     }
   }
   &__item {
@@ -721,7 +757,12 @@
     gap: 35px;
     position: relative;
     z-index: 1;
-    padding-bottom: 115px;
+    padding: 90px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
     &-text {
       width: 100%;
       font-size: 24px;
@@ -731,28 +772,45 @@
       background: linear-gradient(90deg, #4360f6 0%, #0d1333 94.04%);
       font-weight: 600;
       color: $white-4;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: 0.3s ease-out 0.12s;
     }
     p {
       flex: 1;
       max-width: 705px;
       color: $white-4;
       font-weight: 500;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: 0.3s ease-out 0s;
     }
-    &-shape {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: -1;
-      height: 85%;
-      bottom: -10px;
-      left: 13%;
-      &._right {
-        left: 16%;
+    &.done {
+      p {
+        opacity: 1 !important;
+        transform: translate(0) !important;
+        transition: 0.3s ease-out 0.12s;
       }
-      img {
-        height: 100%;
-        object-fit: contain;
+    }
+    &.active {
+      p {
+        opacity: 1;
+        transform: translate(0);
+        transition: 0.3s ease-out 0.12s;
+      }
+    }
+    &.done & {
+      &-text {
+        opacity: 1 !important;
+        transform: translate(0) !important;
+        transition: 0.3s ease-out;
+      }
+    }
+    &.active & {
+      &-text {
+        opacity: 1;
+        transform: translate(0);
+        transition: 0.3s ease-out;
       }
     }
   }
@@ -1390,11 +1448,16 @@
       gap: 50px;
       &-container {
         gap: 70px;
+        &-line {
+          svg path {
+            stroke-width: 3;
+          }
+        }
       }
     }
     &__item {
       flex-direction: column;
-      padding-bottom: unset;
+      padding: 60px 0;
       gap: 24px;
       &-text {
         font-size: 18px;
@@ -1604,7 +1667,7 @@
       &-button {
         font-size: 20px;
       }
-    }
+    }`
   }
   .feedback {
     padding-bottom: 130px;
@@ -1695,6 +1758,15 @@
     }
   }
   .help {
+    &__inner {
+      &-container {
+        &-line {
+          svg path {
+            stroke-width: 2;
+          }
+        }
+      }
+    }
     .shape {
       &._top {
         font-size: 18px;
@@ -1810,6 +1882,8 @@
   .help {
     border-radius: 16px;
     &__item {
+      padding: 40px 0;
+
       &-text {
         font-size: 16px;
       }
