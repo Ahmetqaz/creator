@@ -948,10 +948,12 @@
       font-size: 18px;
       padding: 0 3em 0 1.4em;
       line-height: 1.4;
-      @include transition;
       opacity: 0;
       pointer-events: none;
       max-height: 0;
+      overflow: hidden;
+      transition: 0.3s linear;
+
       p {
         line-height: inherit;
         font-size: inherit;
@@ -960,7 +962,8 @@
         padding: 0.5em 3em 2em 1.4em;
         opacity: 1;
         pointer-events: all;
-        max-height: unset;
+        max-height: 600px;
+        transition: 0.3s linear;
       }
     }
   }

@@ -2858,12 +2858,12 @@ svg {
   font-size: 18px;
   padding: 0 3em 0 1.4em;
   line-height: 1.4;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
   opacity: 0;
   pointer-events: none;
   max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 .faq__tab-content p {
   line-height: inherit;
@@ -2873,7 +2873,9 @@ svg {
   padding: 0.5em 3em 2em 1.4em;
   opacity: 1;
   pointer-events: all;
-  max-height: unset;
+  max-height: 600px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 .faq .titleBox {
   display: -webkit-box;

@@ -4,6 +4,7 @@ const settings = {
     spaceBetween: 0,
     effect: "cube",
     grabCursor: true,
+    speed: 850,
     cubeEffect: {
       shadow: false,
       slideShadows: false,
