@@ -66,7 +66,6 @@ function ScrollProgress({
   };
   const resetState = (wrapperOffset) => {
     let topOffset = window.pageYOffset + screenOffset;
-    console.log("refresh");
     if (scaleProgressRange) {
       let wrapperHeight = getComputedHeight(wrapper);
       let currentScrolledDistance = topOffset - wrapperOffset;

@@ -747,6 +747,7 @@
           height: 100%;
           background: $black-secondary;
           transition: 0.2s linear;
+          will-change: height;
         }
       }
     }
@@ -964,6 +965,7 @@
         pointer-events: all;
         max-height: 600px;
         transition: 0.3s linear;
+        will-change: auto;
       }
     }
   }
