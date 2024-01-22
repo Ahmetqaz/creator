@@ -278,15 +278,15 @@
                               </h5>
                               <div class="clients__item-text">
                                 <span> Revenue </span>
-                                <strong> $750 / mo </strong>
+                                <strong> $<count-n>750</count-n> / mo </strong>
                               </div>
                               <div class="clients__item-text">
                                 <span> Subscribers </span>
-                                <strong> 60,000 </strong>
+                                <strong> <count-n>60,000</count-n> </strong>
                               </div>
                               <div class="clients__item-text">
                                 <span> Monthly Views </span>
-                                <strong> 9,000,000 </strong>
+                                <strong> <count-n>9,000,000</count-n> </strong>
                               </div>
                             </div>
                             <div class="clients__item-info">
@@ -296,15 +296,21 @@
                               </h5>
                               <div class="clients__item-text _secondary">
                                 <span> Revenue </span>
-                                <strong> $2,500+ / mo </strong>
+                                <strong>
+                                  $<count-n data-plus>2,500</count-n> / mo
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Subscribers </span>
-                                <strong> 100,000+ </strong>
+                                <strong>
+                                  <count-n data-plus>100,000</count-n>
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Monthly Views </span>
-                                <strong> 15,000,000+ </strong>
+                                <strong>
+                                  <count-n data-plus>15,000,000</count-n>
+                                </strong>
                               </div>
                             </div>
                           </div>
@@ -358,11 +364,11 @@
                               </div>
                               <div class="clients__item-text">
                                 <span> Subscribers </span>
-                                <strong> 3,500 </strong>
+                                <strong> <count-n>3,500</count-n> </strong>
                               </div>
                               <div class="clients__item-text">
                                 <span> Monthly Views </span>
-                                <strong> 2,500 </strong>
+                                <strong> <count-n>2,500</count-n> </strong>
                               </div>
                             </div>
                             <div class="clients__item-info">
@@ -372,15 +378,21 @@
                               </h5>
                               <div class="clients__item-text _secondary">
                                 <span> Revenue </span>
-                                <strong> $100+ / mo </strong>
+                                <strong>
+                                  $<count-n data-plus>100</count-n> / mo
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Subscribers </span>
-                                <strong> 7,000+ </strong>
+                                <strong>
+                                  <count-n data-plus>7,000</count-n>
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Monthly Views </span>
-                                <strong> 15,000+ </strong>
+                                <strong>
+                                  <count-n data-plus>15,000</count-n>
+                                </strong>
                               </div>
                             </div>
                           </div>
@@ -434,11 +446,11 @@
                               </div>
                               <div class="clients__item-text">
                                 <span> Subscribers </span>
-                                <strong> 250 </strong>
+                                <strong> <count-n>250</count-n> </strong>
                               </div>
                               <div class="clients__item-text">
                                 <span> Monthly Views </span>
-                                <strong> 500 </strong>
+                                <strong> <count-n>500</count-n> </strong>
                               </div>
                             </div>
                             <div class="clients__item-info">
@@ -448,15 +460,21 @@
                               </h5>
                               <div class="clients__item-text _secondary">
                                 <span> Revenue </span>
-                                <strong> $250+ / mo </strong>
+                                <strong>
+                                  $<count-n data-plus>250</count-n> / mo
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Subscribers </span>
-                                <strong> 1,640+ </strong>
+                                <strong>
+                                  <count-n data-plus>1,640</count-n>
+                                </strong>
                               </div>
                               <div class="clients__item-text _secondary">
                                 <span> Monthly Views </span>
-                                <strong> 25,000+ </strong>
+                                <strong>
+                                  <count-n data-plus>25,000</count-n>
+                                </strong>
                               </div>
                             </div>
                           </div>
@@ -1292,17 +1310,19 @@
       </div>
       <!-- #popUp end -->
     </div>
-    <script
+    <!-- <script
       type="text/javascript"
       src="https://assets.calendly.com/assets/external/widget.js"
       async
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    ></script> -->
+
     <script src="js/scroll-progress.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="js/WOW.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animate.js"></script>
+    <script src="js/counter.js"></script>
     <script>
       const scrollProgressEl = document.querySelector(".help__inner-container");
       ScrollProgress({
@@ -1311,6 +1331,32 @@
         scrollProgressRangeEl: ".help__inner-container-line-progress",
         refreshOffset: 300,
       });
+
+      const swiper = document.querySelector(".swiper");
+      const runActiveCounters = () => {
+        const activeCounters = swiper.querySelectorAll(
+          ".swiper-slide-active count-n"
+        );
+        activeCounters.forEach((counter) => counter.count());
+      };
+      swiper.swiper.on("transitionEnd", function () {
+        runActiveCounters();
+      });
+
+      const _callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runActiveCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+      const options = {
+        rootMargin: "100px",
+        threshold: 0.8,
+      };
+      const observer = new IntersectionObserver(_callback, options);
+      observer.observe(swiper);
     </script>
   </body>
 </html>
